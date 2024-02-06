@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,5 +10,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
+  constructor(
+    @Inject(LOCALE_ID) public activeLocale: string
+  ) {}
+
   title = 'i18n-demo';
+
+  onChangeLanguage(key: string): void {
+    window.location.href= `/${this.activeLocale}`;
+  }
 }
