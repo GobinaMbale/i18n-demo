@@ -13,13 +13,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale":"en-US",
-        "locales": {
-          "fr": "src/assets/local/messages.fr.xlf",
-          "es": "src/assets/local/messages.es.xlf"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -71,12 +64,6 @@
               ],
               "outputHashing": "all"
             },
-            "es": {
-              "localize": ["es"]
-            },
-            "fr": {
-              "localize": ["fr"]
-            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -93,12 +80,6 @@
             },
             "development": {
               "buildTarget": "i18n-demo:build:development"
-            },
-            "es": {
-              "browserTarget": "i18n-demo:build:es"
-            },
-            "fr": {
-              "browserTarget": "i18n-demo:build:fr"
             }
           },
           "defaultConfiguration": "development"
