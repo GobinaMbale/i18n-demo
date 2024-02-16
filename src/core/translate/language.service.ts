@@ -14,8 +14,6 @@ export class LanguageService {
       const localStorage = document.defaultView?.localStorage;
       let browserLang: any;
       translate.addLangs(this.languages);
-
-      console.log(localStorage?.getItem(this.language));
       if (localStorage?.getItem(this.language)) {
         browserLang = localStorage.getItem(this.language);
       } else {
